@@ -141,4 +141,24 @@ This project demonstrates:
 - Assistive communication system design  
 - Accessibility using TTS and STT concepts
 
-  
+## 📸 Screenshots
+
+### 🧑‍🦯 Blind Mode
+![Blind Mode](screenshots/BlindMode.jpeg)
+
+### 🧏 Deaf Mode
+![Deaf Mode](screenshots/DeafMode.jpeg)
+
+### 🏠 Normal Mode
+![Normal Mode](screenshots/NormalMode.jpeg)
+
+### 📊 Output Screen
+![Output](screenshots/Output.jpeg)
+
+### 🎥 Record Video
+![Record Video](screenshots/RecordVideo.jpeg)
+
+### 🔊 Speech to Text (STT)
+![STT](screenshots/STT.jpeg)
+
+
