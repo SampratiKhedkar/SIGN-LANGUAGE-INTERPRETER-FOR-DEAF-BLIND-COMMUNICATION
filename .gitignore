@@ -19,3 +19,5 @@ local.properties
 .vscode/
 
 FeelSpeak/app/google-services.json
+
+hs_err_pid*.log
