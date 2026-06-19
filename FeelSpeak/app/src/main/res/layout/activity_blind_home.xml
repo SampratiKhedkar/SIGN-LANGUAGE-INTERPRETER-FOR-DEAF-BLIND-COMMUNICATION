@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout_blind"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_feelspeak_offwhite">
+
+    <!-- MAIN AREA (toolbar + blind content) -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarBlind"
+            style="@style/Widget.MaterialComponents.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#682B2B"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            app:navigationIcon="@drawable/ic_menu"
+            app:navigationIconTint="@android:color/white">
+
+            <!-- Center cursive title -->
+            <TextView
+                android:id="@+id/toolbarTitleBlind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/feelspeak_cursive"
+                android:text="FeelSpeak"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <LinearLayout
+            android:id="@+id/rootBlindLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="85dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_feelspeak_offwhite"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blind Person Mode"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#21242E"
+                android:gravity="center"
+                android:layout_marginBottom="48dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginBottom="48dp"
+                android:background="@drawable/btn_red_gradient"
+                app:backgroundTint="@null"
+                android:gravity="center"
+                android:text="👆Tap anywhere to speak"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#FFE8E8"
+                android:gravity="center"
+                android:padding="48dp"
+                android:text="Ready to listen"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:textColor="#4D4D4D" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- LEFT DRAWER -->
+    <include
+        android:id="@+id/left_drawer_container_blind"
+        layout="@layout/layout_right_drawer"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

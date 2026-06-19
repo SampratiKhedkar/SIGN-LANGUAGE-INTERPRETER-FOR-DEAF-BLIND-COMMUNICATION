@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_feelspeak_offwhite">
+
+    <!-- Toolbar + content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarVideoPreview"
+            style="@style/Widget.MaterialComponents.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#682B2B"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:navigationIconTint="@android:color/white">
+
+            <TextView
+                android:id="@+id/toolbarTitleVideoPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/feelspeak_cursive"
+                android:text="Predict Video"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Main content below toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_feelspeak_offwhite"
+            android:padding="24dp">
+
+            <!-- Video at top -->
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Sentence / prediction text -->
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/videoView"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Predicted Sentence is "
+                android:textColor="#4D4D4D"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:background="#FFE8E8" />
+
+            <!-- Horizontal GIFs (sound icon + audio waves) -->
+            <LinearLayout
+                android:id="@+id/layoutAudioAnimations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtResult"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgSoundMic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/imgAudioWaves"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+            <!-- Predict button -->
+            <Button
+                android:id="@+id/btnPredict"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutAudioAnimations"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_red_gradient"
+                android:padding="14dp"
+                android:text="Predict"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:backgroundTint="@null" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

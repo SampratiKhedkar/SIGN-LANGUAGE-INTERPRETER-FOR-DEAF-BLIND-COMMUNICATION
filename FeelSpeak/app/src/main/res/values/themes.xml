@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App theme, no ActionBar/toolbar -->
+    <style name="Theme.FeelSpeak.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#682B2B</item>
+        <item name="colorPrimaryVariant">#FF7961</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">#FFEB3B</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+    </style>
+
+</resources>

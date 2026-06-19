@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF2F0"
+    android:paddingLeft="6dp"
+    android:paddingTop="26dp"
+    android:paddingRight="6dp">
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:layout_marginBottom="24dp"
+        android:background="#682B2B"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_profile"
+            android:background="@drawable/circle_background"
+            app:civ_circle_background_color="#D6D6D6"
+            android:scaleType="centerCrop"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#666666" />
+
+        <TextView
+            android:id="@+id/profile_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello,"
+            android:textColor="#FFEBEB"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Guest"
+            android:fontFamily="@font/sidebar_cursive"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Theme Toggle Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Theme"
+        android:fontFamily="@font/sidebar_cursive"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/button_theme_light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Light"
+            android:textColor="@color/black"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIcon="@drawable/ic_light_mode"
+            app:chipIconTint="@color/black"
+            app:chipBackgroundColor="#FFFFFF" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/button_theme_dark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Dark"
+            android:textColor="@color/black"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIcon="@drawable/ic_dark_mode"
+            app:chipIconTint="@color/black"
+            app:chipBackgroundColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <!-- Menu Items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#FFF2F0">
+
+        <!-- Home -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_home"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:fontFamily="@font/sidebar_cursive"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                app:icon="@drawable/ic_home"
+                app:iconTint="@color/black"
+                app:textAllCaps="false"
+                app:backgroundTint="#FFF2F0" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/black"  />
+        </FrameLayout>
+
+        <!-- My Profile -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_profile"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:fontFamily="@font/sidebar_cursive"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                app:icon="@drawable/ic_profile"
+                app:iconTint="@color/black"
+                app:textAllCaps="false"
+                app:backgroundTint="#FFF2F0" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/black"  />
+        </FrameLayout>
+
+        <!-- Notifications -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_notifications"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:fontFamily="@font/sidebar_cursive"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                app:icon="@drawable/ic_notifications"
+                app:iconTint="@color/black"
+                app:textAllCaps="false"
+                app:backgroundTint="#FFF2F0" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/black"  />
+        </FrameLayout>
+
+        <!-- About Us -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_about"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:fontFamily="@font/sidebar_cursive"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:icon="@drawable/ic_info"
+                app:iconTint="@color/black"
+                app:textAllCaps="false"
+                app:backgroundTint="#FFF2F0" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/black"  />
+        </FrameLayout>
+
+        <!-- Help -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_help"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:fontFamily="@font/sidebar_cursive"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:icon="@drawable/ic_help"
+                app:iconTint="@color/black"
+                app:textAllCaps="false"
+                app:backgroundTint="#FFF2F0" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/black"  />
+        </FrameLayout>
+
+        <!-- Settings -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_settings"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:fontFamily="@font/sidebar_cursive"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:icon="@drawable/ic_settings"
+                app:iconTint="@color/black"
+                app:textAllCaps="false"
+                app:backgroundTint="#FFF2F0" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/black"  />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Logout -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_logout"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Logout"
+        app:icon="@drawable/ic_logout"
+        app:iconTint="@color/white"
+        android:textSize="25sp"
+        android:fontFamily="@font/sidebar_cursive"
+        app:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#682B2B" />
+
+</LinearLayout>

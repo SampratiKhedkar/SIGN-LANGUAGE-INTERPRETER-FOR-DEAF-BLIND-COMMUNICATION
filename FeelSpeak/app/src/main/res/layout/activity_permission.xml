@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_feelspeak_offwhite"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="FeelSpeak needs permissions"
+        android:background="@drawable/btn_red_gradient"
+        app:backgroundTint="@null"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- Microphone row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFE8E8"
+        android:padding="8dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/txtMic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Microphone (record speech)"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgMicCheck"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_check_green"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Camera row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFE8E8"
+        android:padding="8dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/txtCamera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Camera (record sign language)"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgCameraCheck"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_check_green"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Storage row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFE8E8"
+        android:padding="8dp"
+        android:layout_marginBottom="48dp">
+
+        <TextView
+            android:id="@+id/txtStorage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Storage (upload videos)"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgStorageCheck"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_check_green"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Grant button -->
+    <Button
+        android:id="@+id/btnGrantPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GRANT PERMISSIONS"
+        android:background="@drawable/btn_orange_gradient"
+        app:backgroundTint="@null"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_feelspeak_offwhite">
+
+    <!-- Toolbar + content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarRecordAudio"
+            style="@style/Widget.MaterialComponents.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#682B2B"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:navigationIconTint="@android:color/white">
+
+            <TextView
+                android:id="@+id/toolbarTitleRecordAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/feelspeak_cursive"
+                android:text="Record Audio"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_feelspeak_offwhite"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Record Audio"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="48dp"/>
+
+            <Button
+                android:id="@+id/btnRecord"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:text="🎤Record  "
+                android:background="@drawable/btn_red_gradient"
+                app:backgroundTint="@null"
+                android:textSize="24sp"
+                android:layout_marginBottom="48dp"/>
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Press Record and speak!"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                android:background="#FFE8E8"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:padding="24dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
